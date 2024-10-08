@@ -14,27 +14,27 @@ Este projeto frontend foi desenvolvido utilizando:
 ```
 ├── src
 │   ├── assets
-│   │   ├── #Arquivos usados na aplicação
+│   │   ├──   #Arquivos usados na aplicação
 │   ├── components
-│   │   ├── #Componentes usados na aplicação
+│   │   ├──   #Componentes usados na aplicação
 │   ├── routes
-│   │   ├── Private.tsx #Componente para privar as rotas
+│   │   ├── Private.tsx   #Componente para privar as rotas
 │   ├── services
-│   │   ├── taskService.ts #Importa do Backend as funções de CRUD via Firebase Firestore
-│   │   ├── authService.ts #Lógica de Autenticação com o Firebase
-│   │   ├── firebaseConnection.ts #Conexão com Firebase
+│   │   ├── taskService.ts   #Importa do Backend as funções de CRUD via Firebase Firestore
+│   │   ├── authService.ts   #Lógica de Autenticação com o Firebase
+│   │   ├── firebaseConnection.ts   #Conexão com Firebase
 │   ├── contexts 
-│   │   ├── #Contexts utilizados na aplicação
+│   │   ├──   #Contexts utilizados na aplicação
 │   ├── pages
 │   │   ├── authPage
-│   │   │   ├── authPage.tsx #Página de autenticação
+│   │   │   ├── authPage.tsx   #Página de autenticação
 │   │   ├── dashboad
-│   │   │   ├── dashboard.tsx #Página de Dashboard
-│   ├── App.tsx #Contém as rotas da aplicação
-│   ├── main.tsx #Ponto de entrada do React
-│   ├── index.css #Estilização principal da aplicação, contém importado as configurações do Tailwind CSS
-├── .env                     # Necessário para configurar as variáveis de ambiente
-├── package.json              # Dependências do projeto
+│   │   │   ├── dashboard.tsx   #Página de Dashboard
+│   ├── App.tsx   #Contém as rotas da aplicação
+│   ├── main.tsx   #Ponto de entrada do React
+│   ├── index.css   #Estilização principal da aplicação, contém importado as configurações do Tailwind CSS
+├── .env   # Necessário para configurar as variáveis de ambiente
+├── package.json   # Dependências do projeto
 ```
 
 ## Configuração Inicial
