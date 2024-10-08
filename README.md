@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# Focus - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visão Geral
+Este projeto frontend foi desenvolvido utilizando:
+- **React.js**
+- **TypeScript**
+- **Tailwind CSS**
+- **React-Hook-Form**
+- **Zod**
+- **Firebase para autenticação**
+- **Figma para Interface**
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Estrutura de Pastas
+```
+├── src
+│   ├── assets
+│   │   ├── #Arquivos usados na aplicação
+│   ├── components
+│   │   ├── #Componentes usados na aplicação
+│   ├── routes
+│   │   ├── Private.tsx #Componente para privar as rotas
+│   ├── services
+│   │   ├── taskService.ts #Importa do Backend as funções de CRUD via Firebase Firestore
+│   │   ├── authService.ts #Lógica de Autenticação com o Firebase
+│   │   ├── firebaseConnection.ts #Conexão com Firebase
+│   ├── contexts 
+│   │   ├── #Contexts utilizados na aplicação
+│   ├── pages
+│   │   ├── authPage
+│   │   │   ├── authPage.tsx #Página de autenticação
+│   │   ├── dashboad
+│   │   │   ├── dashboard.tsx #Página de Dashboard
+│   ├── App.tsx #Contém as rotas da aplicação
+│   ├── main.tsx #Ponto de entrada do React
+│   ├── index.css #Estilização principal da aplicação, contém importado as configurações do Tailwind CSS
+├── .env                     # Necessário para configurar as variáveis de ambiente
+├── package.json              # Dependências do projeto
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Configuração Inicial
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Instalar Dependências:**
+   
+Antes de iniciar o projeto, certifique-se de instalar todas as dependências:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```
+npm install
+```
+
+2. **Configuração do Firebase:**
+Este frontend se conecta ao Firebase para autenticação. Certifique-se de ter um projeto Firebase configurado e adicione as credenciais no arquivo .env:
+```
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
+
+3. **Iniciando o Projeto:**
+Após configurar o ambiente, execute o seguinte comando para iniciar o servidor de desenvolvimento:
+```
+npm run dev
 ```
