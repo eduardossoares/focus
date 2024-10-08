@@ -114,9 +114,9 @@ export default function Dashboard() {
                 </Button>
             </aside>
             <div className="absolute right-4 top-6 text-white flex items-center gap-x-2
-            cursor-pointer">
+            cursor-pointer" onClick={handleSignOut}>
                 <span className="text-lg hidden sm:block">Sair</span>
-                <GoSignOut className="sm:text-2xl text-3xl" onClick={handleSignOut} />
+                <GoSignOut className="sm:text-2xl text-3xl" />
             </div>
             <div className="flex w-full justify-center mt-24">
                 <div className="space-y-16 w-64 sm:w-auto">
