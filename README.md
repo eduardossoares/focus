@@ -1,4 +1,5 @@
 # Focus - Frontend
+Focus é uma aplicação web completa desenvolvida para ajudar os usuários a gerenciar suas tarefas de maneira eficiente.
 
 ## Visão Geral
 Este projeto frontend foi desenvolvido utilizando:
